@@ -1,19 +1,63 @@
-//
-//  ViewController.swift
-//  Deneme22
-//
-//  Created by Eren lifetime on 4.10.2023.
-//
+// quiz değişkeni oluşturdum questionNumber[1] ile çalıştırdığım zaman 1 tane soru gösteriyor buttonlara tıkladığımda hiçbirşey çalışmıyor.
+// answer diye ayrı bir değişken oluştursam ve cevapları yazsam.! Button a tıkladığımda yanlışları ve doğruları göstermesi lazım buttonların.
 
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var progressBar: UIProgressView!
+    
+    @IBOutlet weak var answer1: UIButton!
+    @IBOutlet weak var answer2: UIButton!
+    @IBOutlet weak var answer3: UIButton!
+    @IBOutlet weak var answer4: UIButton!
+    // PARAMETRE ÇAĞIRMAK İÇİN BAŞLANGICI BUNUNLA ATTIK
+    var quizBrain = QuizBrain()
+    
+//    var questionNumber = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        updateUI()
+}
+    @IBAction func answerButtonPressed(_ sender: UIButton) {
+        let userAnswer = sender.currentTitle!
+        // PARAMETRE DE 2. ADIM YERİ
+        let userGotItRight = quizBrain.checkAnswer(userAnswer: userAnswer)
+        
+        if userGotItRight {
+            sender.backgroundColor = UIColor.green
+        }else{
+            sender.backgroundColor = UIColor.red
+        }
+// İF ELSE SINAVIN İLERLEYİŞİ BİR SONRAKİ SORUYA GEÇMEK İÇİN VAR
+        quizBrain.nextQuestion()
+        
+        Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+                
+           }
+// Butona tıkladığımızda soruların değişmediğini farkettik bunu nasıl hallederiz updateUI ile
+//
+    @objc func updateUI(){
+        questionLabel.text = quizBrain.getQuestionText()
+        
+        let answerChoices = quizBrain.getAnswers()
+        answer1.setTitle(answerChoices[0], for: .normal)
+        answer2.setTitle(answerChoices[1], for: .normal)
+        answer3.setTitle(answerChoices[2], for: .normal)
+        answer4.setTitle(answerChoices[3], for: .normal)
+
+        progressBar.progress = quizBrain.getProgress()
+        
+        scoreLabel.text = "Score\(quizBrain.getScore())"
+// Arka rengi yeşil veya kırmızı olduktan sonra clear yapıp bir sonraki soruya geçiyoruz
+        answer1.backgroundColor = UIColor.clear
+        answer2.backgroundColor = UIColor.clear
+        answer3.backgroundColor = UIColor.clear
+        answer4.backgroundColor = UIColor.clear
+        
     }
-
-
+    
 }
 
