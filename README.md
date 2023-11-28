@@ -2,10 +2,12 @@
 # What's the Purpose?
 
 I did it to improve myself and understand the methods more easily.
-i created this project cause i actually love the quiz games
+
+i created this project cause i actually love quiz games
 
 # How does it work?
 There are 10 questions and leave time to think
+
 I recommend you to play this game with thought.
 
 # What did i use?
