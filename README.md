@@ -1,9 +1,8 @@
 
 # What's the Purpose?
+i just want to show people some interesting app.
 
-I did it to improve myself and understand the methods more easily.
-
-i created this project cause i actually love quiz games
+My purpose for this app is to entertain and teach
 
 # How does it work?
 There are 10 questions and leave time to think
