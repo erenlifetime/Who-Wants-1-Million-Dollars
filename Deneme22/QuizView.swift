@@ -45,8 +45,10 @@ struct QuizBrain {
             questionNumber = 0
         }
     }
+        // cevapları yazdıktan ve geri gönderdikten sonra(return) cevapları kontrol etme işlemini uygulayacağız. 
+        // Kontrol edeceğim şey kullanıcı cevabı olmalı bu yüzden userAnswer diye değişken oluşturdum
+        // ardından boolean ile eğer userAnswer eşit ise quiz in sayı numarasının doğru cevabına ise true döndür değilse false.
     mutating func checkAnswer(userAnswer: String) -> Bool {
-    // doğru cevap(rightAnswer) için cevabı değiştirmen gerekiyor. return true ve false döndürünce olursa çalıştır olmazsa false ver
         if userAnswer == quiz[questionNumber].rightAnswer {
             score += 1
             return true
