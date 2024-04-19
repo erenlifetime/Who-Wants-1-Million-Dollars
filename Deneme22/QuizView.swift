@@ -7,6 +7,8 @@ struct QuizBrain {
     // quiz değişkenim ile sorularımı quiz e aktarıyorum böylelikle diğer sayfalarda kullanabilmek için.
     var questionNumber = 0
     var score = 0
+    // değişkenlerimi tanımlayıp init ile gösterdim ve self ile de birbirlerine eşitledim.
+    // o struct ı da Question olarak quiz içerisinde yazdım ardından bana [q:...a:..,rightAnswer:..] verdi.
     let quiz = [
             Question(q: "Daktilo kullanılarak yazılan ilk kitap hangisidir?", a: ["Martin Eden", "Gizemli Yabancı", "Hz Süleyman'ın Hazineleri","Tom Sawyer'in Maceraları"], correctAnswer: "Tom Sawyer'in Maceraları"),
             Question(q: "Bilge Kül Kağan hangi Türk devletinin kurucusudur?", a: ["Göktürk Kağanlığı", "Uygur Kağanlığı", "Büyük Selçuklu Devleti","Hazar Kağanlığı"], correctAnswer: "Uygur Kağanlığı"),
