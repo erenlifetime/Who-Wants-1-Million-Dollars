@@ -1,40 +1,23 @@
 
 # What's the Purpose?
-i just want to show people some interesting app.
-
-My purpose for this app is to entertain and teach
+Differences between Class and Struct resolved and i used it my project
+i created four button for my answers and i gave their names also gave labels
 
 # How does it work?
 There are 10 questions and leave time to think
 
 I recommend you to play this game with thought.
-
-# What did i use?
-  This Project was made to MVVM(Model-View & View-Model)  
-# Parameters
-
-All parameters without default values will be required.
-
-Param types of Int, Bool and String are natively supported. All other types will be passed as raw values exactly as they are, so if compiled you can pass anything.
-
+  # Parameters
+  This Project was made to MVVM(Model-View & View-Model) 
+  [QuizView.swift] Differences between Class and Structure are resolved, function and mutation function are also resolved
+  [QuizView.swift] i created four button for my answers and i gave their names also gave labels
+  [QuizView.swift] When i pressed the button i didn't go to the next page so i created a function with float and i used to question number / question count
+  [QuizView.swift] i checked the answers with function and also used Boolean( return true and false)
+  [ViewController.swift] After understanding the green or red color of the background, we move on to the next section, which is clearly seen.
+  [ViewController.swift] I noticed that the questions did not change when we clicked the button. I solved the problem with updateUI.
 # Libraries Used;
 import Foundation		
 
 import UIKit
-
-# What did i use in the User Interface?	 
-
-UIButton 4 units		
-
-UILabel 4 units
-
-Storyboard Entry Point 1 units	
 # FeedBack
-
 Please share your comments, good or bad, with me.
-
-# Support
-
-If your Swift command line tool builds with the Swift Package Manager than it will automatically install and run with calculator!
-
-Make sure you have defined an executable product type in the products list within your Package.swift.
