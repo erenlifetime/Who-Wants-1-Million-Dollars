@@ -1,11 +1,14 @@
 
 # What's the Purpose?
+
 Entertaining Competition Show
 
 # How does it work?
+
 There are 10 questions and leave time to think
 
 I recommend you to play this game with thought.
+
   # Parameters
   
   This Project was made to MVVM(Model-View & View-Model) 
@@ -23,7 +26,10 @@ I recommend you to play this game with thought.
   [ViewController.swift] I noticed that the questions did not change when we clicked the button. I solved the problem with updateUI.
   
 # Libraries Used;
-import Foundation		
+import Foundation	
+
 import UIKit
+
 # FeedBack
+
 Please share your comments, good or bad, with me.
